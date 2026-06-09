@@ -1,6 +1,6 @@
 def ft_tqdm(lst: range) -> None:
     total = len(lst)
-    bar_length = 58
+    bar_length = 98
 
     for i, elem in enumerate(lst, start=1):
         filled_length = bar_length \
