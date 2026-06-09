@@ -1,5 +1,6 @@
 from numpy import array
 from PIL import Image
+from matplotlib import pyplot as plt
 
 
 def ft_load(path: str) -> array:
@@ -9,8 +10,8 @@ def ft_load(path: str) -> array:
             img_rgb = array(img.convert("RGB"))
             print(f"The shape of image is: {img_rgb.shape}")
             print(img_rgb)
-            image = Image.fromarray(img_rgb)
-            image.show()
+            plt.imshow(img_rgb)
+            plt.show()
             return img_rgb
     except Exception as e:
         print(f"Error loading image: {e}")
