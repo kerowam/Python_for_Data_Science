@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def load(path: str) -> pd.DataFrame | None:
     '''
     Takes a path as argument, writes the dimensions of the data set

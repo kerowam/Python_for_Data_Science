@@ -18,7 +18,6 @@ def display_graph(dataset):
         plt.ylabel("Life Expectancy")
         plt.xticks(years[::40])
         plt.yticks(range(30, 100, 10))
-        plt.legend()
         plt.tight_layout()
         plt.show()
 
