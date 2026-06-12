@@ -15,7 +15,7 @@ requires-python = ">=3.10"
 license = "MIT"
 
 [project.urls]
-Homepage = "https://github.com/kerowam/ft_package"
+Homepage = "https://github.com/kerowam/Python_for_Data_Science/tree/main/0-Starting/ex09/ft_package"
 
 [tool.setuptools.packages.find]
 include = ["ft_package*"]
