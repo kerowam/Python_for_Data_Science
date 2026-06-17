@@ -52,6 +52,6 @@ def ft_grey(array) -> array:
     gray[:, :, 0] = gray_image
     gray[:, :, 1] = gray_image
     gray[:, :, 2] = gray_image
-    plt.imshow(image, cmap='gray')
+    plt.imshow(gray_image)
     plt.show()
     return gray
