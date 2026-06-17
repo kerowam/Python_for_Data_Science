@@ -1,14 +1,14 @@
 import sys
 
 
-def odd_or_even(number):
+def odd_or_even(number: int) -> str:
     if number % 2 == 0:
         return "I'm Even"
     else:
         return "I'm Odd"
 
 
-def error(message):
+def error(message: str)-> None:
     print(f"AssertionError: {message}")
     sys.exit(1)
 

@@ -3,13 +3,13 @@
 import sys
 
 
-def error(message):
+def error(message: str) -> None:
     '''Prints an error message and exits the program.'''
     print(f"AssertionError: {message}")
     sys.exit(1)
 
 
-def type_str_counter(av):
+def type_str_counter(av: str) -> None:
     '''
     Counts the number of characters, upper letters, lower letters, \
         punctuation marks, spaces, and digits in the input string.
@@ -31,7 +31,7 @@ def type_str_counter(av):
     print(f"{digits} digits")
 
 
-def main(argv):
+def main(argv: list[str]) -> None:
     '''Main function to handle input and call the type_str_counter function.'''
     try:
         if len(argv) < 2:

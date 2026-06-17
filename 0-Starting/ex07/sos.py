@@ -1,7 +1,7 @@
 import sys
 
 
-def morse_translate(text):
+def morse_translate(text: str) -> str:
     '''Translate a given text into Morse code.'''
     morse_code = {
         ' ': '/', 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..',
@@ -14,7 +14,7 @@ def morse_translate(text):
     return ''.join(morse_code.get(char.upper(), '') for char in text)
 
 
-def main(argv):
+def main(argv: list[str]) -> None:
     '''Main function to handle input and call the morse_translate function.'''
     if len(argv) != 2:
         print("AssertionError: the arguments are bad")
