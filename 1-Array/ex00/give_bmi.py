@@ -14,10 +14,10 @@ def give_bmi(
         raise ValueError("Height and weight lists must have the same length")
 
     for h in height:
-        if not isinstance(h, (int, float)):
+        if isinstance(h, bool) or not isinstance(h, (int, float)):
             raise TypeError("Height list must contain only int or float value")
     for w in weight:
-        if not isinstance(w, (int, float)):
+        if isinstance(w, bool) or not isinstance(w, (int, float)):
             raise TypeError("Weight list must contain only int or float value")
 
     h_arr = np.array(height)
@@ -39,7 +39,7 @@ def apply_limit(
         raise TypeError("Limit must be an integer")
 
     for b in bmi:
-        if not isinstance(b, (int, float)):
+        if isinstance(b, bool) or not isinstance(b, (int, float)):
             raise TypeError("BMI list must contain only int or float values")
 
     return [b > limit for b in bmi]
