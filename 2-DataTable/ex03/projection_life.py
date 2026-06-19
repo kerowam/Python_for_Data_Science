@@ -1,4 +1,4 @@
-from load_csv import load
+import pandas as pd
 import matplotlib.pyplot as plt
 
 
@@ -26,8 +26,8 @@ def projection_life(gdp_dataset, life_dataset, year):
 def main():
     '''Main function to load the dataset and display the graph.'''
     gdp_file = "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
-    gdp_dataset = load(gdp_file)
-    life_dataset = load("life_expectancy_years.csv")
+    gdp_dataset = pd.read_csv(gdp_file)
+    life_dataset = pd.read_csv("life_expectancy_years.csv")
     if gdp_dataset is None or life_dataset is None:
         return 0
     projection_life(gdp_dataset, life_dataset, 1900)
