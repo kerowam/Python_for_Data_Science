@@ -37,7 +37,6 @@ def population_vs(dataset, country):
         country_population = parse_population_data(dataset, country)
         max_y = max(max(spain_population), max(country_population))
 
-
         plt.title("Population Projections")
         plt.plot(years, spain_population, label="Spain")
         plt.plot(years, country_population, label=country)
@@ -45,7 +44,8 @@ def population_vs(dataset, country):
         plt.ylabel("Population")
         plt.xticks(range(1800, 2050, 40))
         plt.ylim(0, max_y + 10_000_000)
-        plt.yticks([20_000_000, 40_000_000, 60_000_000], labels=["20M", "40M", "60M"])
+        plt.yticks([20_000_000, 40_000_000, 60_000_000],
+                   labels=["20M", "40M", "60M"])
         plt.legend()
         plt.tight_layout()
         plt.show()
