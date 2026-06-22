@@ -1,4 +1,4 @@
-import pandas as pd
+from load_csv import load
 from matplotlib import pyplot as plt
 
 
@@ -27,7 +27,7 @@ def display_graph(dataset):
 
 def main():
     '''Main function to load the dataset and display the graph.'''
-    dataset = pd.read_csv("life_expectancy_years.csv")
+    dataset = load("life_expectancy_years.csv")
     if dataset is not None:
         display_graph(dataset)
         return 0

@@ -1,4 +1,4 @@
-import pandas as pd
+from load_csv import load
 from matplotlib import pyplot as plt
 
 
@@ -56,7 +56,7 @@ def population_vs(dataset, country):
 
 def main():
     '''Main function to load the dataset and display the graph.'''
-    dataset = pd.read_csv("population_total.csv")
+    dataset = load("population_total.csv")
     if dataset is not None:
         population_vs(dataset, "France")
         return 0
