@@ -13,7 +13,7 @@ class Student:
     surname: str
     active: bool = True
     login: str = field(init=False)
-    id: str = field(default_factory=generate_id)
 
     def __post_init__(self):
+        self.id: str = field(default_factory=generate_id)
         self.login = f"{self.name[0].upper()}{self.surname.lower()}"
